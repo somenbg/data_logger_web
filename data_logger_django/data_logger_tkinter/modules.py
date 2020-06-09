@@ -36,7 +36,7 @@ class DataFrameManagement():
         dataframe.to_csv('data.csv', index=False)
         return dataframe
 
-
+        
 def get_data_structure():
     data_structure = {
                     'consultancy_name': [''],
