@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>data-Logger</title>
+</head>
+<body>
+    <pre><center>
+        <h1>Entry Form</h1>
+        <h3>data-Logger</h3>
+        <h2>{{ html }}</h2>
+        <form action = '' method="post">
+            <!-- Very Important csrf Token -->
+            {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" name="register">
+    </form>
+    </center></pre>
+</body>

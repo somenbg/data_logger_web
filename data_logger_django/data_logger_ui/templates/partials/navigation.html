@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+	    <ul class="navbar-nav">
+		
+		{% if request.path == '/home/' %}
+	  		<li class="nav-item active">
+	  	{% else %}
+	  		<li class="nav-item">
+	  	{% endif %}
+	    		<a class="nav-link" href="/home">Home</a>
+	  		</li>
+
+	  	{% if request.path == '/users/' %}
+	  		<li class="nav-item active">
+	  	{% else %}
+	  		<li class="nav-item">
+	  	{% endif %}
+	    		<a class="nav-link" href="/users">Users</a>
+	  		</li>
+
+	 	{% if request.path == '/groups/' %}
+	  		<li class="nav-item active">
+	  	{% else %}
+	  		<li class="nav-item">
+	  	{% endif %}
+	    		<a class="nav-link" href="/groups">Groups</a>
+	      	</li>
+
+	  		<li class="nav-item">
+	    		<a type="button" class="nav-link" id="upload_csv" data-toggle="modal" data-target="#modal-group" href="" data-url="{% url 'csv_uploader' %}">File upload</a>
+	      	</li>
+
+	    </ul>
+    </div>
+</nav>

@@ -1,0 +1,29 @@
+{% load static %}
+
+{% block page_head %}
+{% include "partials/head.html" with pageTitle="data-Logger" %}
+{% endblock %}
+
+<body>
+    {% include 'partials/header.html' %}
+    <main class="container my-5">
+        {% block content %}
+        <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-8">
+                <h1 class="mt-2">Entry Form</h1>
+                <hr class="mt-0 mb-4">
+                {% block content %}
+                {% endblock %}
+              </div>
+            </div>
+          </div>
+        {% endblock %}
+    </main>
+    {% include 'partials/footer.html' %}
+    
+    {% block javascript %}
+    {% endblock %}
+
+</body>
+</html>
