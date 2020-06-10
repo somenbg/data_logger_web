@@ -13,12 +13,6 @@ class DataFrameManagement():
         return df
     
     
-    def create_df(self):
-        df = dict_to_df(user_gui.result)
-        print('File updated')
-        return df
-    
-    
     def read_csv(self, df):
         try:
             existing_data = pd.read_csv('data.csv')
@@ -47,5 +41,6 @@ def get_data_structure():
                     'training_fee': [''],
                     'relocation': [''],
                     'status': [''],
+                    'technology_requirement': [''],
                     }
     return data_structure
